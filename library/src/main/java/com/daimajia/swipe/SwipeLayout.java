@@ -3,9 +3,7 @@ package com.daimajia.swipe;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Rect;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.widget.ViewDragHelper;
+
 import android.util.AttributeSet;
 import android.view.GestureDetector;
 import android.view.Gravity;
@@ -18,6 +16,10 @@ import android.view.ViewParent;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.FrameLayout;
+
+import androidx.core.view.GravityCompat;
+import androidx.core.view.ViewCompat;
+import androidx.customview.widget.ViewDragHelper;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -58,8 +60,8 @@ public class SwipeLayout extends FrameLayout {
     private boolean mSwipeEnabled = true;
     private boolean[] mSwipesEnabled = new boolean[]{true, true, true, true};
     private boolean mClickToClose = false;
-    private float mWillOpenPercentAfterOpen = 0.75f;
-    private float mWillOpenPercentAfterClose = 0.25f;
+    private float mWillOpenPercentAfterOpen = 1.0f;
+    private float mWillOpenPercentAfterClose = 1.0f;
 
     public enum DragEdge {
         Left,
